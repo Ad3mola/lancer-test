@@ -1,56 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
-            rel="stylesheet"
-        />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+  href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
+  rel="stylesheet"
+/>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0px;
+      font-family: ubuntu;
+    }
 
-        <title>Client Information</title>
-    </head>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Ubuntu;
-        }
+    .con-div {
+      background-color: #FFFFFF;
+      width: 100%;
+      margin: auto;
+    }
 
-        a:hover {
-            text-decoration: none;
-            color: grey;
-        }
-        .container {
-            margin: 0 auto;
-            max-width: 660px;
-        }
-        .button {
-            background-color: rgba(196, 196, 196, 0.4);
-            padding: 0.9em;
-            display: inline-block;
-            width: 12em;
-            text-decoration: none;
-            color: white;
-            border: 1px solid rgb(179, 176, 176);
-        }
-        .company-input {
-            padding: 5px;
-            min-width: 40%;
-            margin-left: 40px;
-        }
-        .input {
-            padding: 5px;
-            min-width: 40%;
-            margin-left: 50px;
-        }
-        .column-1 {
+    .top-divs {
+      display: flex;
+      margin: 0 auto;
+      width: 100%;
+      background-color: #FFFFFF;
+      font-family: Roboto;
+    }
+
+    .ctrl-div {
+      width: 8%;
+      text-align: center;
+      border: 1px solid #919191;
+    }
+
+    .ctrl-btn {
+      width: 100%;
+      background-color: #FFFFFF;
+      border: none;
+    }
+
+    .inv-div {
+      width: 60%;
+      text-align: center;
+      border: 1px solid #919191;
+    }
+
+    #inv-btn {
+      width: 100%;
+      border: none;
+      padding: 0.5em;
+      font-weight: 500;
+      font-size: 28px;
+      background-color: #FFFFFF;
+    }
+
+    .send-div {
+      width: 32%;
+      text-align: center;
+      border: 1px solid #919191;
+    }
+
+    #send-btn {
+      width: 100%;
+      border: none;
+      padding: 0.5em;
+      color: #FFF;
+      font-size: 28px;
+      background-color:  rgba(196, 196, 196, 0.4);
+    }
+
+    .cli-info {
+      width:75%;
+      height:80vh;
+      background-color:#FFFFFF;
+      margin: auto
+    }
+
+    .cli-box {
+      display: flex;
+      justify-content:space-around;
+    }
+
+    .sub-box {
+      width: 30%;
+      padding: 2em 1em;
+      margin: 2em;
+      background-color:#FFF;
+      text-align:center;
+      border: 1px solid #919191;
+      border-radius: 2px
+    }
+
+    .select-project {
+      width: 90%;
+      padding: 1em;
+      border: 1px solid #919191;
+    }
+
+    .cli-text {
+      padding-top: 1.5em;
+    }
+
+    .my-icon {
+      width: 100%;
+      margin: 0.6em 0;
+      color: #c4c4c4;
+      background-color: #FFFFFF;
+    }
+
+    .what-cli {
+      padding: 1.5em 1em;
+      margin: 0;
+      font-size: 42px;
+      font-weight: bold;
+      color: #323232;
+    }
+
+    .txt {
+      margin: 2em 0;
+    }
+    .column-1 {
             width: 5%;
             border-right: 2px solid rgb(223, 223, 223);
             padding: 1em;
@@ -79,41 +152,26 @@
             font-size: 1.2em;
             font-weight: bold;
         }
-        img {
-            height: 20px;
-            width: 15px;
-        }
-        p img {
-            height: 10px;
-            width: 10px;
-        }
-        .is-invalid {
-            border-color: red;
-        }
-        .invalid-feedback {
-            display: none;
-            width: 100%;
-            margin-top: 0.25rem;
-            font-size: 80%;
-            color: #dc3545;
-        }
-        label {
-            font-family: "Ubuntu", sans-serif;
-            font-size: 0.9rem;
-        }
-        @media (max-width: 575.98px) {
-            h2 {
-                font-size: 1.5rem;
-            }
-            h4 {
-                font-size: 1.1rem;
-            }
-            .input {
-                margin-left: 5px;
-            }
-            .company-input {
-                margin-left: 5px;
-            }
+
+    @media screen and (max-width: 500px) {
+      .cli-box {
+        display: block;
+      }
+
+      .sub-box {
+        width: 90%;
+        margin: 2em 0em;
+      }
+
+      option {
+        width: 80%;
+      }
+
+      .what-cli {
+        font-size: 1.3em;
+      }
+    }
+    @media (max-width: 575.98px) {
             .column-1 {
                 width: 15%;
                 padding: 0;
@@ -148,192 +206,50 @@
                 width: 9%;
             }
         }
-    </style>
-    <body style="margin: 0;">
-        <header style="border-bottom: 2px solid rgb(223, 223, 223);">
-            <nav style="display: flex; ">
-                <a href="#" class="column-1">
-                    <img
-                        src="https://res.cloudinary.com/mide358/image/upload/v1570621469/clear_24px_rasbwc.png"
-                        alt="navIcon"
-                    />
-                </a>
-                <a href="#" class="column-1">
-                    <img
-                        src="https://res.cloudinary.com/mide358/image/upload/c_scale,h_27,w_13/v1570621434/Vector_ag4hnv.png"
-                        alt="navIcon"
-                    />
-                </a>
-                <div class="column-2">client</div>
-                <a href="#" class="column-3">NEXT</a>
-            </nav>
-        </header>
-        <div class="container" style="padding: .5em .5em 0 .5em">
-            <h2 style="font-weight: 700;">Client Information</h2>
-            <form>
-                <fieldset
-                    style="border: 1px solid rgb(179, 176, 176);border-top: 2px solid rgb(179, 176, 176);border-bottom: 2px solid rgb(179, 176, 176);"
-                    class="p-4 mb-1"
-                >
-                    <h4 style="font-weight:700">Business Information</h4>
-                    <div  class="input-group-append">
-                        <label for="companyName">
-                            Company name
-                           
-                        </label>
-                        <input
-                        type="text"
-                        placeholder="e.g Sunshine studio"
-                        id="companyName"
-                        class="company-input"
-                        required
-                        style="border:1px solid rgb(223, 223, 223); border-right:0;font-size: .7rem;"
-                    />
-                    <span
-                        class="input-group-text mb-0 pb-0"
-                        id="basic-addon2"
-                        style="background-color: white;padding: 0;margin: 0;border-radius: 0;border:1px solid rgb(223, 223, 223); border-left: 0;font-size: .5rem;padding-top: 1.8em; padding-right:.3em;color: #00F9FF;"
-                        >Required</span
-                    >
-                    </div>
-                    <div class="invalid-feedback">
-                        Enter a company name with at least 2 letters
-                    </div>
-                    
-                    <p style="padding: 1em;font-weight: bold; font-size: .8em">
-                        Add Address
-                        <a
-                            href="client-information-inactive-2.html"
-                            style="font-size: 1.5em;color: black"
-                        >
-                            +</a
-                        >
-                    </p>
-                    <h4 style="font-weight:700">Contact Information</h4>
-                    <div class="name">
-                        <div class="input-group-append">
-                                <label for="contactName" >
-                                        Contact name
-                                        
-                                    </label>
-                                    <input
-                                            type="text"
-                                            placeholder="e.g Ben Davies"
-                                            id="contactName"
-                                            class="input"
-                                            style="border:1px solid rgb(223, 223, 223); border-right:0;font-size: .7rem;"
-                                        />
-                                        <span
-                                            class="input-group-text mb-0 pb-0"
-                                            id="basic-addon2"
-                                            style="background-color: white;padding: 0;margin: 0;border-radius: 0;border:1px solid rgb(223, 223, 223); border-left: 0;font-size: .5rem;padding-top: 1.8em; padding-right:.3em;color: white"
-                                            >Required</span
-                                        >
-                                        
-                        </div>
-                        <div class="invalid-feedback">
-                                Enter a name with at least 5 letters
-                            </div>
-                    </div>
-                    <div style="padding-top:1em;" class="email">
-                        <div  class="input-group-append">
-                                <label for="contactEmail">
-                                        Contact email
-                                       
-                                    </label>
-                                    <input
-                                    type="text"
-                                    placeholder="e.g email@domain.com"
-                                    id="contactEmail"
-                                    class="input"
-                                    required
-                                    style="border:1px solid rgb(223, 223, 223); border-right:0;font-size: .7rem;"
-                                />
-                                <span
-                                    class="input-group-text mb-0 pb-0"
-                                    id="basic-addon2"
-                                    style="background-color: white;padding: 0;margin: 0;border-radius: 0;border:1px solid rgb(223, 223, 223); border-left: 0;font-size: .5rem;padding-top: 1.8em; padding-right:.3em;color: #00F9FF;"
-                                    >Required</span
-                                >
-                                
-                        </div>
-                        <div class="invalid-feedback">
-                                Enter a valid email
-                            </div>
-                    </div>
-                    <p
-                        style="padding: 1em; font-weight: bold; font-size: .8em;margin-bottom: 5em;"
-                    >
-                        Add other contacts <a
-                        href="#"
-                        style="font-size: 1.5em;color: black"
-                    >
-                        +</a
-                    >
-                    </p>
-                </fieldset>
-                <p style=" display: block;text-align: center;">
-                    <a href="#" class="button">NEXT</a>
-                </p>
-            </form>
+  </style>
+</head>
+<body>
+  <div class="con-div">
+    <div class="max-con">
+      <header style="border-bottom: 2px solid rgb(223, 223, 223);">
+        <nav style="display: flex; ">
+            <a href="#" class="column-1">
+                <img
+                    src="https://res.cloudinary.com/mide358/image/upload/v1570621469/clear_24px_rasbwc.png"
+                    alt="navIcon"
+                />
+            </a>
+            <a href="#" class="column-1">
+                <img
+                    src="https://res.cloudinary.com/mide358/image/upload/c_scale,h_27,w_13/v1570621434/Vector_ag4hnv.png"
+                    alt="navIcon"
+                />
+            </a>
+            <div class="column-2">client</div>
+            <a href="#" class="column-3">NEXT</a>
+        </nav>
+    </header>
+
+      <div class="cli-info">
+        <div>
+          <p class="what-cli">What Client is it for?</p>
         </div>
-    </body>
-    <script>
-        document
-            .getElementById("companyName")
-            .addEventListener("blur", validateName);
-        document
-            .getElementById("contactName")
-            .addEventListener("blur", validateContactName);
-        document
-            .getElementById("contactEmail")
-            .addEventListener("blur", validateEmail);
 
-        function validateName() {
-            const companyName = document.getElementById("companyName");
-            const re = /^[a-zA-Z]{2,}$/;
+        <div class="cli-box" style="color: #919191">
+          <div class="sub-box">
+            <p class="txt">An already existing Client</p>
+            <select name="" class="select-project" style="color: #919191">
+              <option value="">Select Project</option>
+              <option value="">Demo</option>
+            </select>
+          </div>
+          <div class="sub-box">
+            <p class="cli-text">A new Client</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            if (!re.test(companyName.value)) {
-                companyName.classList.add("is-invalid");
-                document.querySelector(".invalid-feedback").style.display =
-                    "block";
-            } else {
-                companyName.classList.remove("is-invalid");
-                document.querySelector(".invalid-feedback").style.display =
-                    "none";
-            }
-        }
-        function validateContactName() {
-            const contactName = document.getElementById("contactName");
-            const re = /^[a-zA-Z]{5,}$/;
-
-            if (!re.test(contactName.value)) {
-                contactName.classList.add("is-invalid");
-                document.querySelector(
-                    ".name .invalid-feedback"
-                ).style.display = "block";
-            } else {
-                contactName.classList.remove("is-invalid");
-                document.querySelector(
-                    ".name .invalid-feedback"
-                ).style.display = "none";
-            }
-        }
-        function validateEmail() {
-            const contactEmail = document.getElementById("contactEmail");
-            const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-
-            if (!re.test(contactEmail.value)) {
-                contactEmail.classList.add("is-invalid");
-                document.querySelector(
-                    ".email .invalid-feedback"
-                ).style.display = "block";
-            } else {
-                contactEmail.classList.remove("is-invalid");
-                document.querySelector(
-                    ".email .invalid-feedback"
-                ).style.display = "none";
-            }
-        }
-    </script>
+  </div>
+</body>
 </html>
